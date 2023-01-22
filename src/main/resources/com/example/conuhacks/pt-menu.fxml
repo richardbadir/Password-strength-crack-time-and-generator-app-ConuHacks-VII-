@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="anchorPanePt" prefHeight="400.0" prefWidth="600.0" stylesheets="@PTstyle.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.conuhacks.PtMenuController">
+   <children>
+      <Text fill="WHITE" layoutX="150.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Input Your Password For Testing:" wrappingWidth="333.1982421875">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Text>
+      <JFXTextField fx:id="inputTestingPassword" focusColor="WHITE" layoutX="155.0" layoutY="86.0" onKeyReleased="#updateCheckList" prefHeight="27.0" prefWidth="311.0" style="-fx-background-color: White;" unFocusColor="#ffffff00">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </JFXTextField>
+      <JFXCheckBox fx:id="checkListLength" layoutX="51.0" layoutY="171.0" onAction="#undoCheck" text="Length is 10+ Characters" textFill="WHITE" unCheckedColor="#f8f8f8" />
+      <JFXCheckBox fx:id="checkListCharacter" layoutX="51.0" layoutY="206.0" onAction="#undoCheckChar" text="Special Characters (@, #, $, %, ...)" textFill="WHITE" unCheckedColor="WHITE" />
+      <JFXCheckBox fx:id="checkListUpper" layoutX="51.0" layoutY="241.0" onAction="#undoCheckUpper" text="Capital Letter Included" textFill="WHITE" unCheckedColor="WHITE" />
+      <JFXCheckBox fx:id="checkListNumber" layoutX="51.0" layoutY="273.0" onAction="#undoCheckNumber" text="Number Included" textFill="WHITE" unCheckedColor="WHITE" />
+      <Text fill="WHITE" layoutX="322.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Complexity: ">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="322.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CrackTime: " wrappingWidth="98.18212687969208">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <JFXButton fx:id="closeButtonPT" layoutX="498.0" layoutY="14.0" onAction="#closeButtomPGAction" prefHeight="45.0" prefWidth="96.0" text="Close" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="28.0" fitWidth="33.0" layoutX="112.0" layoutY="86.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@lock.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="59.0" fitWidth="54.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@bulldozer_logo.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="BackButtonPT" layoutX="498.0" layoutY="342.0" onAction="#BackButtomPTAction" prefHeight="45.0" prefWidth="96.0" text="← Back" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </JFXButton>
+      <Line endX="-15.0" endY="180.0" layoutX="304.0" layoutY="146.0" startX="-15.0" startY="-3.0" stroke="WHITE" />
+      <Line endX="293.0" endY="7.0" layoutX="286.0" layoutY="135.0" startX="-252.0" startY="7.0" stroke="WHITE" />
+      <Line endX="291.0" endY="4.5" layoutX="286.0" layoutY="319.0" startX="-254.0" startY="4.5" stroke="WHITE" />
+      <Line endX="-15.0" endY="180.0" layoutX="593.0" layoutY="144.0" startX="-15.0" startY="-3.0" stroke="WHITE" />
+      <Line endX="-15.0" endY="180.0" layoutX="47.0" layoutY="143.0" startX="-13.70709228515625" startY="-1.75" stroke="WHITE" />
+      <ProgressBar fx:id="complexityBar" layoutX="425.0" layoutY="197.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="10.0" prefWidth="145.0" progress="0.0" stylesheets="@PTstyle.css" />
+      <JFXButton fx:id="buttonTestPassword" layoutX="224.0" layoutY="346.0" onAction="#buttonTestPassword" prefHeight="28.0" prefWidth="132.0" stylesheets="@PTstyle.css" text="Test Strength" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </JFXButton>
+      <Text fx:id="complexityResult" fill="WHITE" layoutX="425.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="144.99999524652958">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <Text fx:id="cracktimeResult" fill="WHITE" layoutX="436.0" layoutY="232.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="144.99999524652958">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <JFXCheckBox fx:id="checkHide" layoutX="483.0" layoutY="91.0" onAction="#checkHideAction" text="Hide" textFill="WHITE" unCheckedColor="#f8f8f8" />
+      <JFXPasswordField fx:id="inputPassField" focusColor="WHITE" layoutX="155.0" layoutY="85.0" onKeyReleased="#updateCheckListPassword" prefHeight="30.0" prefWidth="311.0" style="-fx-background-color: WHITE;" unFocusColor="WHITE" visible="false">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXPasswordField>
+   </children>
+</AnchorPane>

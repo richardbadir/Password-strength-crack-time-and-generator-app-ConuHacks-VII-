@@ -1,0 +1,44 @@
+#anchorPanePt{
+
+    -fx-background-color: linear-gradient(
+        to left,
+        repeat,
+        #21a6ff 0%,
+        #0B0B45 40%
+      );
+}
+#closeButtonPT:hover {
+    -fx-background-color: red;
+     -fx-background-radius: 15px;
+}
+
+ #BackButtonPT:hover {
+        -fx-background-color: grey;
+        -fx-background-radius: 15px;
+
+
+        }
+
+#buttonTestPassword{
+     -fx-border-color: white;
+     -fx-background-color: #0B0B45;
+     }
+
+     #buttonTestPassword:hover{
+     -fx-background-color: grey;
+    }
+
+}
+
+#complexityBar{
+
+    -fx-background-color:
+        -fx-box-border,
+        linear-gradient(to bottom, derive(-fx-color,30%) 5%, derive(-fx-color,-17%));
+    -fx-background-insets: 0, 1;
+    -fx-indeterminate-bar-length: 60;
+    -fx-indeterminate-bar-escape: true;
+    -fx-indeterminate-bar-flip: true;
+    -fx-indeterminate-bar-animation-time: 2;
+
+}
